@@ -82,8 +82,8 @@ svg {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .links-container {
@@ -278,11 +278,11 @@ svg {
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .features-items {
-  max-width: calc((100% - 72px) / 4);
 }
 
 .features-images-container {
@@ -294,18 +294,36 @@ svg {
   align-items: center;
   background-color: #f4f4fd;
   margin-bottom: 8px;
+
+  @media screen and (max-width: 1157px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .features-items-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features-items-text {
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -327,12 +345,12 @@ svg {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .team-items {
   background-color: #fff;
-  width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -822,6 +840,26 @@ svg {
     max-width: 496px;
     margin-bottom: 36px;
   }
+
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .features-items {
+    max-width: calc((100% - 24px) / 2);
+  }
+
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+
+  .team-items {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -829,6 +867,11 @@ svg {
     max-width: 1158px;
     padding-right: 15px;
     padding-left: 15px;
+  }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .hero {
@@ -848,5 +891,31 @@ svg {
 
   .hero-headding {
     margin-bottom: 48px;
+  }
+
+  .features-list {
+    gap: 24px;
+  }
+
+  .features-items {
+    max-width: calc((100% - 72px) / 4);
+  }
+
+  .features-items-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .features-items-text {
+    font-weight: 400;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-items {
+    width: calc((100% - 72px) / 4);
   }
 }
