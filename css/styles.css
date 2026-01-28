@@ -128,7 +128,6 @@ svg {
 
 .header-logo {
   color: #2e2f42;
-  margin-right: 76px;
 }
 
 .header-navigation-panel {
@@ -182,7 +181,6 @@ svg {
 .header-contacts-list {
   display: flex;
   align-items: center;
-  gap: 40px;
 }
 
 .header-contacts-items {
@@ -197,6 +195,15 @@ svg {
 .header-contacts-items-text:hover,
 .header-contacts-items-text:focus {
   color: #404bbf;
+}
+
+.header-menu-btn {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
 }
 
 /* ----------------- HERO / ORDER SERVICE ----------------- */
@@ -316,10 +323,6 @@ svg {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
 }
 
 .features-items-text {
@@ -332,13 +335,6 @@ svg {
 
 .team {
   background-color: #f4f4fd;
-}
-
-@media screen and (max-width: 767px) {
-  .team > .container {
-    padding-right: 28px;
-    padding-left: 28px;
-  }
 }
 
 .team-heading {
@@ -495,15 +491,6 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-
-  @media screen and (max-width: 767px) {
-    gap: 72px;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1157px) {
-    gap: 72px 24px;
-  }
 }
 
 .footer-content {
@@ -512,12 +499,6 @@ svg {
 .footer-logo {
   color: #f4f4fd;
   margin-bottom: 16px;
-}
-
-.footer-adaptive-headding {
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
 }
 
 .footer-text {
@@ -567,12 +548,6 @@ svg {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
 }
 
 .footer-form-input {
@@ -588,10 +563,6 @@ svg {
   letter-spacing: 0.04em;
   color: #fff;
   outline: none;
-
-  @media screen and (max-width: 767px) {
-    width: 288px;
-  }
 }
 
 .footer-form-input::placeholder {
@@ -848,9 +819,60 @@ svg {
   background-color: #404bbf;
 }
 
+@media screen and (max-width: 767px) {
+  .header .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .header-navigation-panel-list {
+    display: none;
+  }
+
+  .header-contacts {
+    display: none;
+  }
+
+  .features-items-title {
+    text-align: center;
+  }
+
+  .team > .container {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .footer-flex-container {
+    gap: 72px;
+    align-items: center;
+  }
+
+  .footer-adaptive-headding {
+    text-align: center;
+  }
+
+  .footer-form {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .footer-form-input {
+    width: 288px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+
+  .header-navigation-panel {
+    gap: 120px;
+  }
+
+  .header-menu-btn {
+    display: none;
   }
 
   .hero {
@@ -885,13 +907,6 @@ svg {
     max-width: calc((100% - 24px) / 2);
   }
 
-  @media screen and (max-width: 1157px) {
-    .team > .container {
-      padding-right: 108px;
-      padding-left: 108px;
-    }
-  }
-
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -916,16 +931,36 @@ svg {
     height: 300px;
   }
 
-  .footer > .container {
-    @media screen and (max-width: 1157px) {
-      padding-right: 108px;
-      padding-left: 108px;
-    }
-  }
-
   .footer-flex-container {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .header-contacts-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contacts-items-text {
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+  }
+
+  .team > .container {
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+
+  .footer > .container {
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+
+  .footer-flex-container {
+    gap: 72px 24px;
   }
 }
 
@@ -939,6 +974,14 @@ svg {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+
+  .header-navigation-panel {
+    gap: 76px;
+  }
+
+  .header-contacts-list {
+    gap: 40px;
   }
 
   .hero {
