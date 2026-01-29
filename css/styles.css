@@ -655,9 +655,11 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 
-.main-form-close-btn:hover {
+.main-form-close-btn:hover,
+.main-form-close-btn:focus {
   background-color: #404bbf;
   fill: #fff;
 }
@@ -772,6 +774,11 @@ svg {
   margin-right: 8px;
   position: relative;
   fill: transparent;
+  flex-shrink: 0;
+}
+
+.main-form-policy-check:focus + .main-form-policy-fake-check {
+  outline: 1px solid #404bbf;
 }
 
 .main-form-policy-check:checked + .main-form-policy-fake-check {
@@ -792,10 +799,10 @@ svg {
 
 .main-form-policy-label a {
   line-height: 1.33333;
+  letter-spacing: normal;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
-  padding-left: 3px;
 }
 
 .main-form-submit-btn {
@@ -859,6 +866,16 @@ svg {
 
   .footer-form-input {
     width: 288px;
+  }
+
+  .modal {
+    max-width: 288px;
+    max-height: 623px;
+    padding: 24px 16px;
+  }
+
+  .main-form-close-btn {
+    right: 8px;
   }
 }
 
