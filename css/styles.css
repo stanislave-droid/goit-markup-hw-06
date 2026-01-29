@@ -206,6 +206,112 @@ svg {
   height: 24px;
 }
 
+.header-mobile-menu-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 24px 16px;
+  overflow-y: auto;
+
+  /* opacity: 0;
+  visibility: hidden;
+  pointer-events: none; */
+}
+
+.header-mobile-menu {
+  position: relative;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-close-btn:active {
+  background-color: #404bbf;
+  fill: #fff;
+}
+
+.mobile-menu-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu-nav-items {
+}
+
+.mobile-menu-nav-text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.mobile-menu-nav-active-page {
+  color: #404bbf;
+}
+
+.mobile-menu-address {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.mobile-menu-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-address-items {
+}
+
+.mobile-menu-address-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.mobile-menu-address-accent {
+  color: #4d5ae5;
+}
+
+.mobile-menu-address-link-list {
+  gap: 40px;
+}
+
+.mobile-menu-address-link-list > .links-items-icon:active {
+  background-color: #404bbf;
+}
+
 /* ----------------- HERO / ORDER SERVICE ----------------- */
 
 .hero {
@@ -874,7 +980,7 @@ svg {
     padding: 24px 16px;
   }
 
-  .main-form-close-btn {
+  .form > .main-form-close-btn {
     right: 8px;
   }
 }
