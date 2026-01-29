@@ -272,6 +272,10 @@ svg {
   color: #2e2f42;
 }
 
+.mobile-menu-nav-text:active {
+  color: #404bbf;
+}
+
 .mobile-menu-nav-active-page {
   color: #404bbf;
 }
