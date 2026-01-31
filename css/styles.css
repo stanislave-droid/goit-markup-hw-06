@@ -593,8 +593,8 @@ svg {
 
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-flex-container {
@@ -1177,6 +1177,11 @@ svg {
       0 2px 1px 0 rgba(46, 47, 66, 0.08),
       0 1px 1px 0 rgba(46, 47, 66, 0.16),
       0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .footer-content {
